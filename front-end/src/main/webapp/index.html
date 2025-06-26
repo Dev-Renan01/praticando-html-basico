@@ -8,7 +8,8 @@ body {
 </head>
 <body>
 	<!--Primeiro mini projeto Front-end -->
-	<form action="">
+	
+	<form action="SalvarUsuariof" onsubmit="return validarDados()? true : false"> 
 
 		<table style="background: #CFCFCF";>
 			<tr>
@@ -25,7 +26,7 @@ body {
 
 			<tr>
 				<td><label>Senha:</label></td>
-				<td><input type="password" id="senha" name="Senha"
+				<td><input type="password" id="Senha" name="Senha"
 					style="border-radius: 5px;"></td>
 			</tr>
 
@@ -37,5 +38,40 @@ body {
 
 		</table>
 	</form>
+	<script type="text/javascript">
+		function validarDados() {
+			var nome = document.getElementById("nome").value;
+			var Login = document.getElementById("Login").value
+			var Senha = document.getElementById("Senha").value
+
+
+			if(nome == ''){
+				alert('Informe o seu nome! ')
+				return false;
+			}else if(Login == ''){
+				alert('Informe o seu login!');
+				return false
+			}else if(Senha == ''){
+				alert('Informe a sua senha!');
+				return false;
+			}
+			
+		
+			return true;
+			
+		}
+	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
